@@ -1,0 +1,15 @@
+FROM node:alpine
+
+COPY malcon /home
+WORKDIR /home
+
+# proxy 環境
+#RUN npm -g config set proxy ""
+#RUN npm -g config set https-proxy ""
+
+# npm のバージョンアップ
+#RUN npm install -g npm@8.3.1
+
+RUN npm install
+
+EXPOSE 3000
